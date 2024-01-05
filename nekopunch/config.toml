@@ -1,6 +1,8 @@
 # The URL the site will be built for
 base_url = "https://nekopunch.computer"
 
+title = "Random Developer's Blog"
+
 # Whether to automatically compile all Sass files in the sass directory
 compile_sass = true
 
@@ -11,6 +13,13 @@ build_search_index = true
 # Whether to do syntax highlighting
 # Theme can be customised by setting the `highlight_theme` variable to a theme supported by Zola
 highlight_code = true
+highlight_theme = "monokai"
 
 [extra]
 # Put all your custom variables here
+
+mastodon=""
+twitter="https://twitter.com/gartunius"
+github="https://github.com/gatunet"
+
+profile_pic="https://github.com/gatunet.png"

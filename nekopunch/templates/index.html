@@ -1,0 +1,30 @@
+{% extends "base.html" %}
+
+{% block content %}
+<nav>
+  <a href="{{ config.base_url }}" class="home-button">Home</a>
+  <div class="links">
+    <a href="{{ config.extra.twitter }}" target="blank">Twitter</a>
+    <a href="{{ config.extra.github }}" target="blank">Github</a>
+  </div>
+</nav>
+
+<div class="main-layout">
+  <h1 class="title">
+    Hello, my name is Gabriel, and this is where I write about computers and the things I'm doing.
+  </h1>
+  <img class="profile-pic" src="{{ config.extra.profile_pic }}">
+</div>
+<div>
+  <h2>Articles</h2>
+  <ul>
+    {% set section = get_section(path="blog/_index.md") %}
+    {% for page in section.pages %}
+    <li>
+      <a href="{{ page.permalink | safe }}">{{ page.title }}</a>
+      <p>{{ page.date }}</p>
+    </li>
+    {% endfor %}
+  </ul>
+</div>
+{% endblock content %}
